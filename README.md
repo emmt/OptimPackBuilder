@@ -1,6 +1,6 @@
 # OptimPackBuilder
 
-[![Build Status](https://travis-ci.com/emmt/OptimPackBuilder.jl.svg?branch=master)](https://travis-ci.com/emmt/OptimPackBuilder.jl)
+[![Build Status](https://travis-ci.com/emmt/OptimPackBuilder.svg?branch=master)](https://travis-ci.com/emmt/OptimPackBuilder)
 
 This repository builds compiled libraries of
 [OptimPack](https://github.com/emmt/OptimPack) project.  Binary artifacts
