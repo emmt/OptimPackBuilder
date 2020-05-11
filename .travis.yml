@@ -27,10 +27,11 @@ script:
 deploy:
   provider: releases
   api_key:
-    # Note; this api_key is only valid for emmt/OptimPackBuilder; you need
-    # to make your own.  With Travis command line tools
-    # (sudo gem install travis), type `travis setup releases` (perhaps with
-    # --force option) from the repository directory.
+    # This api_key is only valid for emmt/OptimPackBuilder; you need to make
+    # your own.  See https://docs.travis-ci.com/user/deployment/releases/.
+    # With Travis command line tools (sudo gem install travis), type
+    # `travis setup releases` (perhaps with --force option) from the repository
+    # directory.
     secure: jHB99A/of3OvEFnkNE/tw1c8bqknRbTPTbmSQACVOYFsASNeeXdgPFmJds2rw0FNGz9tESlPDtCpmJOk3tCSm9rq40JjQWHmmcIMco1HJIj7O8AM7H46UXDIuImj+PGah4RfsKVy/LXfzByx44jRYSE1C6aBDUQdPRbCy32EkpJfMPsxNHxbtidZZq4VfvixG0f7rf3uJWWA0k3/xIi+FjScNbeIjQYP3gEabgm26uMUeSGQV233pxhjttnHN6sNdC/jeRtrVQKyv9h+wyQeMZjC5uA3UOGerxdMBYqv4oYjcNDQnyb4aSsfZbiZf5UAJXyFrRKJ5qul7s5yK23mgMQS3GKec2+ITvFYYef/mrLMkXslA5OEoh2MGaUgcfz7b5ZSqYK5wwMxpul5yH5nDOdb+9KxT3wv9c2ybku/tAKCSZtD9omYsjMGmtNSkl26VFh3JM8ol7vpiDv6SgvH0iPkZRSpV9lmMuT20FtBILtdv2g9H1lN9XGkghysXA+Eq8uygt/M6JI0CJUFKvukK46QCZk2zIrL1pvtSWfn6JzjzdI+ZcpI9sMB020gwzuNUd/C2siHgAm5BvXUStxCqi7CUozLZk7mAAMH9a/A24GwdNSByDaGmZZxpAGVwHK+LXNLFSrPqLWGjSMpyMSKAco8KiyVSNGCOTOYwP1aiLs=
   file: products/*
   overwrite: true
