@@ -26,13 +26,6 @@ script:
   - julia build_tarballs.jl
 deploy:
   provider: releases
-  api_key:
-    # This api_key is only valid for emmt/OptimPackBuilder; you need to make
-    # your own.  See https://docs.travis-ci.com/user/deployment/releases/.
-    # With Travis command line tools (sudo gem install travis), type
-    # `travis setup releases` (perhaps with --force option) from the repository
-    # directory.
-    secure: jHB99A/of3OvEFnkNE/tw1c8bqknRbTPTbmSQACVOYFsASNeeXdgPFmJds2rw0FNGz9tESlPDtCpmJOk3tCSm9rq40JjQWHmmcIMco1HJIj7O8AM7H46UXDIuImj+PGah4RfsKVy/LXfzByx44jRYSE1C6aBDUQdPRbCy32EkpJfMPsxNHxbtidZZq4VfvixG0f7rf3uJWWA0k3/xIi+FjScNbeIjQYP3gEabgm26uMUeSGQV233pxhjttnHN6sNdC/jeRtrVQKyv9h+wyQeMZjC5uA3UOGerxdMBYqv4oYjcNDQnyb4aSsfZbiZf5UAJXyFrRKJ5qul7s5yK23mgMQS3GKec2+ITvFYYef/mrLMkXslA5OEoh2MGaUgcfz7b5ZSqYK5wwMxpul5yH5nDOdb+9KxT3wv9c2ybku/tAKCSZtD9omYsjMGmtNSkl26VFh3JM8ol7vpiDv6SgvH0iPkZRSpV9lmMuT20FtBILtdv2g9H1lN9XGkghysXA+Eq8uygt/M6JI0CJUFKvukK46QCZk2zIrL1pvtSWfn6JzjzdI+ZcpI9sMB020gwzuNUd/C2siHgAm5BvXUStxCqi7CUozLZk7mAAMH9a/A24GwdNSByDaGmZZxpAGVwHK+LXNLFSrPqLWGjSMpyMSKAco8KiyVSNGCOTOYwP1aiLs=
   file: products/*
   overwrite: true
   # Make sure you have skip_cleanup set to true, otherwise Travis CI will
@@ -42,3 +35,5 @@ deploy:
   on:
     repo: emmt/OptimPackBuilder
     tags: true
+  token:
+    secure: wkE48sO64qNr4Qyu3Uzxb/Z+fWgbF0Scqe1lqabuw6tazrEsoHyoeSvKVwM4Vs2R8qSphOt88U4M00HajzEz1+7E6lnNJ2vHAwi015IiEwLp5hhr1BNBbRyvKodFUEv9TpxxZXUQjaldetM15m4EBTluvSVoPzqIwH9otNYDkLj2nD34FW4o6E9gE2JNh1w3gXXx0ygIe5JxI5FeJnRDwA+pa2TQxm7+TQ1LV1b7nXhUNOfUDMuNy3H0dw9pL7uBePDEX9cYyGs/5ddg8V60enHfR8YE0VeueXRXvfJzsiTTR7Jt/L8QVjOuOulNU8SWzTKzwvMskm98JqxvDY99b1vA019vCyCr4zg4szJDpCls/VPdP7VtfnanUKsmWJuA/5uzRhvkIbGtKj1a1UvuZ1ZFGv9zip0x2SbFTustfK9lq09Yfk6yzTuHJDDD9v+mdORVqfY3UlgRyi4mvmU8fWp7PMKNrE9/9qNwusTylhEQtih+2K9MkrJvqeHsgw32jAk8RZyE8LLegnqHNzDOFCmI/kkximsbHXacT3lRQEEeXS64iVDJwynfOMlasogw4XHvMAzU1khw+ZOo0rV5Sp/daeLEJd5ra7mvlXE/mBKf5eKM6JJiFL+m1Z1eIwunmGOHjgBXr6BNDJKA1LtYzizryjlEm0sOyQGcv8HVhAs=
