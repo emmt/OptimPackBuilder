@@ -27,4 +27,6 @@ deploy:
   file: products/*
   on:
     repo: emmt/OptimPackBuilder
-  skip_cleanup: 'true'
+    tags: false
+    branch: master
+  skip_cleanup: true
