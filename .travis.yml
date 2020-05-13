@@ -19,7 +19,7 @@ sudo: required
 before_script:
 - julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder"; Pkg.build()'
 script:
-- julia build_tarballs.jl x86_64-linux-gnu
+- julia build_tarballs.jl
 deploy:
   provider: releases
   api_key:
@@ -29,4 +29,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: emmt/OptimPackBuilder
-    tags: false
+    tags: true
