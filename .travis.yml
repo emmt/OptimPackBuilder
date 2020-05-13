@@ -1,12 +1,8 @@
-# Documentation: http://docs.travis-ci.com/user/languages/julia/
-# This file was addepted from https://github.com/stevengj/xsumBuilder/
-# See discussion at
-# https://discourse.julialang.org/t/julia-package-to-wrap-a-c-library/26749/2
 language: julia
 os:
-  - linux
+- linux
 julia:
-  - 1.4
+- 1.4
 notifications:
   email: false
 git:
@@ -21,20 +17,14 @@ env:
   - BINARYBUILDER_AUTOMATIC_APPLE=true
 sudo: required
 before_script:
-  - julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder"; Pkg.build()'
+- julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder"; Pkg.build()'
 script:
-  - julia build_tarballs.jl x86_64-linux-gnu
+- julia build_tarballs.jl x86_64-linux-gnu
 deploy:
   provider: releases
   api_key:
-    secure: $GITHUB_TOKEN
+    secure: idp6GpXN1rHR4xl8Alh/3XCbshSoDtbWXoIahyOW0zUTMukSakAAebGnaxFk8yq4UWTs/8VB4JXt01KGIluITwMOCMm+3huIpHFGicqGB7V0MwHJiRiebHj0tUriNb0hQxG2Qa7hFwToQQeoG15297FD3WiIm1Vvm8wDRagAJ1yqOQc3LM8vez0MvyaTac8YxBryuhQXILUgp39+2MBYAoK+uL1qmsaCe4Ey/j8RKOnR/vdwMdmklLvhZ4xPx2mIdvdst1do5mZBT1ZlIS+i0q6JsBQAVOORGgPwlAFcjbEfa6GtYs75HRTRz7wGIH59TrmUe8JFb0oMe03Oo1DELmbpA6o96aMLm0SQ33CMfyishBmgAhtUjZTQnChgHVTrzaJR5wQ8+eLCiihTqRANz3HiUKNyiLITLNnd3EOPeQ3CgYzy0kjVExN3eIsWVh+41tugz3cslZDbJ5aVAsMquJt/CSkFUX0zIHc4y+hBPW6Oi0/gvX/n4JawEaD9EviYHatDWl4o2Y+41mOeQgm6n1/fdUAA+koSvKwrL19coHHgNJRYDgmdVMXRZcSiKVswMUaJcQci2ByH1BGExH+a7vUe0Now7PVQpElbtjgl1+LkcnydVHlTOsj0A8slio1UXAc+uJO5LKZvekKYa74SmM+R3Pv053OqwJtZGnWbvKc=
   file: products/*
-  overwrite: true
-  # Make sure you have skip_cleanup set to true, otherwise Travis CI will
-  # delete all the files created during the build, which will probably delete
-  # what you are trying to upload.
-  skip_cleanup: true
   on:
     repo: emmt/OptimPackBuilder
-    tags: false
-    branch: master
+  skip_cleanup: 'true'
