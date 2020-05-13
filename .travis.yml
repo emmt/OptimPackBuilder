@@ -23,7 +23,7 @@ sudo: required
 before_script:
   - julia -e 'using Pkg; pkg"add BinaryProvider"; pkg"add BinaryBuilder"; Pkg.build()'
 script:
-  - julia build_tarballs.jl
+  - julia build_tarballs.jl x86_64-linux-gnu
 deploy:
   provider: releases
   file: products/*
@@ -35,5 +35,5 @@ deploy:
   github_token: $GITHUB_TOKEN
   on:
     repo: emmt/OptimPackBuilder
-    tags: true
+    tags: false
     branch: master
