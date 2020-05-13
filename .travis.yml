@@ -32,8 +32,8 @@ deploy:
   # delete all the files created during the build, which will probably delete
   # what you are trying to upload.
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN
   on:
     repo: emmt/OptimPackBuilder
     tags: true
-  token:
-    secure: wkE48sO64qNr4Qyu3Uzxb/Z+fWgbF0Scqe1lqabuw6tazrEsoHyoeSvKVwM4Vs2R8qSphOt88U4M00HajzEz1+7E6lnNJ2vHAwi015IiEwLp5hhr1BNBbRyvKodFUEv9TpxxZXUQjaldetM15m4EBTluvSVoPzqIwH9otNYDkLj2nD34FW4o6E9gE2JNh1w3gXXx0ygIe5JxI5FeJnRDwA+pa2TQxm7+TQ1LV1b7nXhUNOfUDMuNy3H0dw9pL7uBePDEX9cYyGs/5ddg8V60enHfR8YE0VeueXRXvfJzsiTTR7Jt/L8QVjOuOulNU8SWzTKzwvMskm98JqxvDY99b1vA019vCyCr4zg4szJDpCls/VPdP7VtfnanUKsmWJuA/5uzRhvkIbGtKj1a1UvuZ1ZFGv9zip0x2SbFTustfK9lq09Yfk6yzTuHJDDD9v+mdORVqfY3UlgRyi4mvmU8fWp7PMKNrE9/9qNwusTylhEQtih+2K9MkrJvqeHsgw32jAk8RZyE8LLegnqHNzDOFCmI/kkximsbHXacT3lRQEEeXS64iVDJwynfOMlasogw4XHvMAzU1khw+ZOo0rV5Sp/daeLEJd5ra7mvlXE/mBKf5eKM6JJiFL+m1Z1eIwunmGOHjgBXr6BNDJKA1LtYzizryjlEm0sOyQGcv8HVhAs=
+    branch: master
