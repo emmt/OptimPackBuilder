@@ -24,8 +24,9 @@ deploy:
   provider: releases
   api_key:
     secure: mgQeMn1G0uSRe4Wsi9CwHho+xAoXEpOqrUS1kJVtXgfQLgCIjTDxMFYOfPltWeAcf7zlLCYsboqBvdlSFYnWCiEqCp3vEwe/bNvlA1NJpiz8jfuDiCjSQG1pTDKGNx37iJzQevtTrxqePGY9S0uGyQoz8aHwiK2zIwAMaEFTeyaYST4eOEaWL/oxPyggBfCW6qG7FSgo2a+mN8FLTgaDlvZq1Zo/MIp69P5kt/m/QTWAT3PQuErIQiAR/nuVGD9JVSDMQ13IsB+JPvSzJ8AjcQwwlgFJ4/R33lm+NIhJtBPCg1KkKeDnVSYlaAWQmWZNkw7SbQkrCURbKGZmZ5LUhUb73+SbhHBgr83L5QyWviiU93X46khhwlUzEv/+mc1ZfrDKWwMd6Hk9Flh3iLOtltCXbeLe1eJg9diEhta/TB0MRvKf59+2VwuEEb3I9FKeIV++Qzx4HiybgPVmk0R92ivo1xd6CvW9/LT1ITVKsYvM72x/zm7hZtJZB9mQOwRyrAPNYxnW7rx1ZaBM0lCmh+0AqhgLrFpL6gJTWCf07ShwIRJM95KZTt3q/UO1aqBJjYsNc5+jJtSHkMd/8ATZwJTxTOdLlPqNJ5kyUBwAeVepqbfA0CYyIHMk6GFGSQdv4ViRKNmMuFaqKRWpFDCWiZblU4XUTUJHESX++HIdZ88=
+  file_glob: true
   file: products/*
+  skip_cleanup: true
   on:
     repo: emmt/OptimPackBuilder
     tags: false
-  skip_cleanup: true
