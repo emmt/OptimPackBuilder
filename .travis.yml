@@ -26,13 +26,14 @@ script:
   - julia build_tarballs.jl x86_64-linux-gnu
 deploy:
   provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
   file: products/*
   overwrite: true
   # Make sure you have skip_cleanup set to true, otherwise Travis CI will
   # delete all the files created during the build, which will probably delete
   # what you are trying to upload.
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
   on:
     repo: emmt/OptimPackBuilder
     tags: false
