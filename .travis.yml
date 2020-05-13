@@ -28,5 +28,4 @@ deploy:
   on:
     repo: emmt/OptimPackBuilder
     tags: false
-    branch: master
   skip_cleanup: true
